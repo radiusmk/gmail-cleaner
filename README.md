@@ -7,7 +7,7 @@ Este script Python permite conectar ao Gmail via autenticação OAuth 2.0 e dele
 - ✅ Autenticação OAuth 2.0 segura com o Gmail
 - 🔍 Busca de mensagens com filtros personalizados
 - 📋 Visualização de amostra das mensagens antes da exclusão
-- 🗑️ Exclusão de TODAS as mensagens que combinam com o filtro
+- 🗑️ Exclusão de **TODAS** as mensagens que combinam com o filtro
 - ⚠️ Confirmação antes da exclusão
 - 📊 Controle do número máximo de resultados para amostra
 - 🔄 Processamento em lotes para melhor performance
@@ -112,11 +112,11 @@ python gmail_cleaner.py "subject:newsletter" --delete
 python gmail_cleaner.py "gmail" --max-results 100 --delete
 ```
 
-### 📋 Como Funciona: Amostra vs Deleção Completa
+## 📋 Como Funciona: Amostra vs Deleção Completa
 
 O script funciona em duas etapas:
 
-#### **1. Visualização (Amostra)**
+### **1. Visualização (Amostra)**
 ```bash
 python gmail_cleaner.py "gmail"
 ```
@@ -125,7 +125,7 @@ python gmail_cleaner.py "gmail"
 - **NÃO deleta** nenhuma mensagem
 - Útil para verificar se o filtro está correto
 
-#### **2. Deleção Completa**
+### **2. Deleção Completa**
 ```bash
 python gmail_cleaner.py "gmail" --delete
 ```
@@ -135,7 +135,7 @@ python gmail_cleaner.py "gmail" --delete
 - Processa em lotes de 100 mensagens para melhor performance
 - Mostra progresso em tempo real
 
-#### **Exemplo:**
+### **Exemplo:**
 ```bash
 # Mostra amostra de 50 mensagens com "gmail" no assunto
 python gmail_cleaner.py "subject:gmail"
@@ -144,35 +144,7 @@ python gmail_cleaner.py "subject:gmail"
 python gmail_cleaner.py "subject:gmail" --delete
 ```
 
-### Diagnóstico de Problemas
-
-Se os filtros não estiverem funcionando, execute o script de diagnóstico:
-
-```bash
-python test_gmail.py
-```
-
-Este script irá:
-- Testar a conexão básica
-- Verificar se há mensagens na caixa
-- Testar vários filtros comuns
-- Mostrar estatísticas detalhadas
-
-### 🔧 Correção de Permissões
-
-Se você conseguir buscar mensagens mas receber erro de permissão ao deletar:
-
-```bash
-python fix_permissions.py
-```
-
-Este script irá:
-- Verificar as permissões atuais
-- Re-autenticar com permissões corretas
-- Testar se consegue deletar mensagens
-- Fornecer instruções específicas
-
-### Filtros Disponíveis
+## 🔍 Filtros Disponíveis
 
 O script aceita todos os filtros de busca do Gmail:
 
@@ -202,6 +174,36 @@ python gmail_cleaner.py "has:attachment subject:relatório" --delete
 # Mensagens antigas de um remetente
 python gmail_cleaner.py "from:newsletter@gmail.com before:2023/01/01" --delete
 ```
+
+## 🛠️ Diagnóstico e Correção de Problemas
+
+### Diagnóstico de Problemas
+
+Se os filtros não estiverem funcionando, execute o script de diagnóstico:
+
+```bash
+python test_gmail.py
+```
+
+Este script irá:
+- Testar a conexão básica
+- Verificar se há mensagens na caixa
+- Testar vários filtros comuns
+- Mostrar estatísticas detalhadas
+
+### Correção de Permissões
+
+Se você conseguir buscar mensagens mas receber erro de permissão ao deletar:
+
+```bash
+python fix_permissions.py
+```
+
+Este script irá:
+- Verificar as permissões atuais
+- Re-autenticar com permissões corretas
+- Testar se consegue deletar mensagens
+- Fornecer instruções específicas
 
 ## ⚠️ Importante
 
@@ -279,6 +281,7 @@ O script exibe informações detalhadas sobre:
 - Número de mensagens encontradas
 - Detalhes de cada mensagem (remetente, assunto, data)
 - Confirmação de exclusão
+- Progresso em tempo real durante a deleção
 
 ## 🤝 Contribuição
 
@@ -286,5 +289,4 @@ Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas 
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes. #   g m a i l - c l e a n e r 
- 
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
