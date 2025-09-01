@@ -286,5 +286,5 @@ Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas 
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes. #   g m a i l - c l e a n e r  
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes. #   g m a i l - c l e a n e r 
  
